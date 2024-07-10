@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figmaDom</title>
+</head>
+<style>
+    #div1 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    #div2 {
+        grid-row: 3;
+        grid-column: 1;
+        margin-left: 330px;
+
+    }
+
+    h4 {
+        color: white;
+    }
+</style>
+
+<body>
+    <h4>Marketing & Promotion</h4>
+    <div id="div1">
+        <img src="bible2.png">
+        <h4><br>Marketing & Promotion<br><br>
+            Expand the reach of your business and services with
+            our marketing and promotion services.including social
+            media campaigns and audience growth strategies.</h4>
+
+
+    </div>
+    <h4>Media Production</h4>
+    <div id="div2">
+        <img src="books2i.jpg">
+        <h4><br>Media Production<br><br>
+            Elevate the quality and impact of your services with our
+            media production services.We provide all the required
+            resources to give your business that unique brans that
+            resonates with your target audience.</h4>
+
+    </div>
+
+
+</body>
+<script>
+
+    var subDiv1 = document.getElementById("div1")
+    subDiv1.style.width = "300px"
+    subDiv1.style.height = "300px"
+    subDiv1.style.borderStyle = "solid"
+    subDiv1.style.borderColor = "purple"
+    var superParents = document.querySelector("body")
+    superParents.appendChild(subDiv1)
+
+
+
+    var subDiv2 = document.getElementById("div2")
+    subDiv2.style.width = "300px"
+    subDiv2.style.height = "300px"
+    subDiv2.style.borderStyle = "solid"
+    subDiv2.style.borderColor = "grey"
+    superParents.appendChild(subDiv2)
+
+
+    var coverDiv = document.createElement("Div")
+    coverDiv.style.width = "1300px"
+    coverDiv.style.height = "900px"
+    coverDiv.style.display = "grid"
+    coverDiv.style.textAlign = "center"
+    coverDiv.style.gridTemplateColumns = "1fr 1fr"
+    coverDiv.style.gridTemplateRows = "100px 100px"
+    coverDiv.style.justifyContent = "center"
+    coverDiv.style.borderColor = "blue"
+    coverDiv.style.borderStyle = "solid"
+    coverDiv.style.rowGap = "10px"
+    coverDiv.style.backgroundColor = "black"
+    coverDiv.appendChild(subDiv2)
+    coverDiv.appendChild(subDiv1)
+    superParents.appendChild(coverDiv)
+
+
+</script>
+
+</html>
